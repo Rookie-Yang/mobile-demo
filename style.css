@@ -21,7 +21,7 @@ a{
   border:1px solid red;
 }
 .nav>li{
-  float:left;
+  
 }
 ul,ol{
   list-style:none;
@@ -29,4 +29,52 @@ ul,ol{
 
 .nav{
   display:none;
+  background : grey;
+  margin-top : 10px;
+}
+
+.nav.active{
+  display : flex;
+  justify-content : space-between;
+}
+
+.nav2{
+  display : none;
+}
+
+@media(min-width: 451px){
+  header >button{
+    display : none;
+  }
+  .nav,
+  .nav.active{
+    display : none;
+  }
+  .nav2{
+    display : block;
+  }
+  header{
+    display : flex;
+    align-items :center;
+
+  }
+  header .nav2{
+    display : flex;
+    margin-left : 20px;
+  } 
+  header .nav2 > li{
+    margin : 0 10px;
+  } 
+}
+
+header{
+  padding : 10px;
+  position : relative;
+
+}
+
+header >button{
+  position : absolute;
+  right : 20px;
+  top : 26px;
 }
